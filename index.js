@@ -32,10 +32,15 @@ console.log(
   
   1. What is the difference between counter1 and counter2?
   
+  counter1 keeps track of the count inside the function counterMaker using a closure. counter2 keeps track of the count using a global variable declared outside of a function called count.
+  
   2. Which of the two uses a closure? How can you tell?
   
-  3. In what scenario would the counter1 code be preferable? In what scenario would 
-     counter2 be better?  
+  counter1 uses a closure. counter1 is assigned to the return value of counterMaker which in turn returns a function called counter that returns an incremented variable that is scoped to the counterMaker function.
+  
+  3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better?  
+  
+  counter1 is useful when you do not want the count variable to be scoped globally and would like to keep it separate from the rest of the program. counter2 is useful when this sort of privacy isn't necessary and you need to be able to access the count variable at any scope.
 */
 
 // counter1 code
